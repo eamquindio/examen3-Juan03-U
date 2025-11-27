@@ -94,16 +94,17 @@ public class Parqueadero {
      */
     public boolean registrarVehiculo(String placa, int modelo, String color, String cedula, String tipo) {
         // TODO: Implementar método con validaciones usando if
-        if( buscarVehiculo(placa) == null) {
+        if (buscarVehiculo(placa) == null) {
             Propietario propietario = buscarPropietario(cedula);
             if (propietario == null) {
-                Vehiculo nuevoVehiculo = new Vehiculo (placa, modelo, color, propietario, tipo);
+                Vehiculo nuevoVehiculo = new Vehiculo(placa, modelo, color, propietario, tipo);
                 vehiculos.add(nuevoVehiculo);
                 return true;
             }
         }
         return false;
     }
+    
 
     // ==================== MÉTODO PARA ACUMULAR HORAS ====================
 
